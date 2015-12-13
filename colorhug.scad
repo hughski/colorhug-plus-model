@@ -47,9 +47,14 @@ module colorhug_pcb()
             }
 
             // socket
-            translate([7.4,21.6,-3.4])
             color([0.2,0.2,0.2])
-            cube([12,3.4,3.4]);
+            translate([7.4,21.6,-3.4]) {
+                cube([12,3.4,3.4]);
+                translate([-1,(3.4-1)/2,2])
+                cube([14,1,1.4]);
+                translate([7,3.4,0])
+                cube([3,0.5,1]);
+            }
 
             // CPU
             translate([3.5,14,1.6])
@@ -263,4 +268,4 @@ module colorhug_foam_pad(){
     }
 }
 
-colorhug_foam_pad();
+colorhug_pcb();
