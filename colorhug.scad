@@ -46,6 +46,21 @@ module colorhug_pcb()
                 sphere(d=5, h=6);
             }
 
+            // offset amp
+            translate([3,8,-0.4])
+            color([0.1,0.1,0.1])
+            cube([4,6,0.8]);
+
+            // power transistors
+            translate([15,9,-0.4])
+            color([0.1,0.1,0.1])
+            cube([2,3,0.8]);
+
+            // 5v buffer
+            translate([10.5,28,-0.4])
+            color([0.1,0.1,0.1])
+            cube([6,8,0.8]);
+
             // socket
             color([0.2,0.2,0.2])
             translate([7.4,21.6,-3.4]) {
